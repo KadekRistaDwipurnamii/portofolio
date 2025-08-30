@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Rista</title>
+  <style>
+    /* ====== STYLE DASAR ====== */
+    body {
+      margin: 0; /* hilangkan margin default browser */
+      font-family: Arial, sans-serif; /* font utama */
+      background: linear-gradient(180deg, #0b0f14, #bc1e9a); /* background gradasi */
+      color: white; /* warna teks default */
+    }
+
+    /* ====== HEADER NAVBAR ====== */
+    header {
+      position: sticky; /* biar header selalu nempel di atas pas scroll */
+      top: 0;
+      background: #111827cc; /* background semi transparan */
+      padding: 10px 20px; /* jarak dalam */
+      display: flex; /* flexbox untuk sejajar kiri-kanan */
+      justify-content: space-between; /* kiri (logo) dan kanan (menu) */
+      align-items: center;
+    }
+    header nav a {
+      margin: 0 10px;
+      color: #ddd;
+      text-decoration: none; /* hilangkan underline */
+      font-weight: bold;
+    }
+    header nav a:hover { color: white; }
+
+    /* ====== MAIN CONTENT ====== */
+    main { max-width: 1000px; margin: auto; padding: 20px; }
+    h2 { margin-top: 50px; }
+
+    /* ====== ABOUT SECTION ====== */
+    .about {
+      display: flex; /* teks & gambar sejajar */
+      align-items: center;
+      justify-content: space-between;
+      background: #b373b3;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    .about p {
+      font-size: 18px; /* 🔥 gedein font (default biasanya 14-16px) */
+      line-height: 1.6; /* bikin spasi antar baris lebih lega */
+      max-width: 60%; /* biar teks ga terlalu panjang */
+    }
+    .about img {
+      width: 220px; /* ukuran foto */
+      border-radius: 15px; /* sudut melengkung */
+    }
+
+    /* ====== LINK SOSMED ====== */
+    .chips a {
+      display: inline-block; /* biar bisa dikasih margin */
+      background: #222;
+      color: #ddd;
+      padding: 6px 12px;
+      border-radius: 999px; /* bentuk pill */
+      margin: 7px 7px 0 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* ====== FORM KONTAK ====== */
+    form input, form textarea {
+      width: 100%; padding: 10px; margin: 6px 0;
+      border-radius: 8px; border: none;
+    }
+    form button {
+      padding: 10px 15px; border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form .primary { background: #7c3aed; color: white; } /* tombol kirim */
+    form .secondary { background: #444; color: white; } /* tombol salin */
+    footer { text-align: center; padding: 20px; color: #bbb; }
+
+    /* ====== PORTOFOLIO SECTION ====== */
+    .portfolio-grid {
+      display: grid; /* pakai grid layout */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* otomatis jadi kolom */
+      gap: 20px; /* jarak antar item */
+      margin-top: 20px;
+    }
+    .portfolio-item {
+      background: #222;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s; /* animasi hover */
+    }
+    .portfolio-item:hover { transform: translateY(-5px); } /* geser dikit pas hover */
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .portfolio-item h3 { margin: 10px 0; }
+    .portfolio-item a {
+      display: inline-block;
+      margin-top: 5px;
+      color: #22d3ee;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .portfolio-item a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- ====== HEADER NAVIGATION ====== -->
+  <header>
+    <div><strong>⚡ Portofolio</strong></div>
+    <nav>
+      <a href="#about">Tentang</a> <!-- link ke section "Tentang" -->
+      <a href="#portfolio">Portofolio</a> <!-- link ke section "Portofolio" -->
+      <a href="#contact">Kontak</a> <!-- link ke section "Kontak" -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====== HERO SECTION (pengenalan) ====== -->
+    <section id="home">
+      <h1>Halo 👋 Saya <span style="color:#22d3ee">Kadek Rista Dwi Purnami</span></h1>
+      <p>Mahasiswa Ilmu Komputer — Universitas Pendidikan Ganesha</p>
+    </section>
+
+    <!-- ====== ABOUT ME ====== -->
+    <section id="about">
+      <h2>🧑‍💻 Tentang Saya</h2>
+      <div class="about">
+        <p>
+        Saya mahasiswa Ilmu Komputer yang berpengalaman dalam mengerjakan project berbasis web, UI/UX, dan aplikasi sederhana. 
+        Beberapa hasil karya saya bisa dilihat langsung pada portofolio ini maupun GitHub. 
+        Saya selalu berusaha meningkatkan kemampuan melalui project nyata agar siap berkontribusi di dunia teknologi.
+        </p>
+        <img src="profil.png.jpg" alt="Foto Profil"> <!-- foto profil -->
+      </div>
+    </section>
+
+    <!-- ====== PORTOFOLIO ====== -->
+    <section id="portfolio">
+      <h2>📂 Portofolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <h3>Website Portfolio</h3>
+          <!-- link project lokal (masih di file C:) -->
+          <a href="file:///C:/Users/rista/Downloads/index.html.html" target="_blank">Lihat Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== KONTAK ====== -->
+    <section id="contact">
+      <h2>✉️ Kontak</h2>
+      <form id="contactForm">
+        <!-- input nama -->
+        <input type="text" name="name" placeholder="Nama Anda" required>
+        <!-- input email -->
+        <input type="email" name="email" placeholder="Email Anda" required>
+        <!-- pesan -->
+        <textarea name="message" placeholder="Pesan Anda..." required></textarea>
+        <!-- tombol kirim -->
+        <button class="primary" type="submit">Kirim</button>
+        <!-- tombol salin email -->
+        <button class="secondary" type="button" id="copyEmail">Salin Email</button>
+        <span id="copyState"></span> <!-- status copy -->
+      </form>
+      <p>Email: <a href="mailto:ristadwipurn@gmail.com">ristadwipurn@gmail.com</a></p>
+      <div class="chips">
+        <!-- link sosmed -->
+        <a href="https://github.com/KadekRistaDwipurnamii" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/sluckygurl/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/username" target="_blank">LinkedIn</a>
+        <a href="https://wa.me/6289508685114" target="_blank">WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 Kadek Rista Dwi Purnami. Dibuat dengan HTML + CSS + JS sederhana.</p>
+  </footer>
+
+  <!-- ====== SCRIPT JS ====== -->
+  <script>
+    /* === FORM KONTAK: ketika submit form === */
+    document.querySelector("#contactForm").addEventListener("submit", (e)=>{
+      e.preventDefault(); // cegah reload halaman
+      const fd = new FormData(e.target); // ambil data input
+      // buka email client (misalnya Gmail/Outlook) dengan data form
+      window.location.href = `mailto:ristadwipurn@gmail.com?subject=Halo, saya ${fd.get("name")}&body=${fd.get("message")}`;
+    });
+
+    /* === TOMBOL COPY EMAIL === */
+    document.querySelector("#copyEmail").addEventListener("click", ()=>{
+      navigator.clipboard.writeText("ristadwipurn@gmail.com"); // salin email ke clipboard
+      document.querySelector("#copyState").textContent = "✔ Email tersalin"; // tampilkan notifikasi
+      setTimeout(()=>document.querySelector("#copyState").textContent="",1500); // hilang setelah 1,5 detik
+    });
+  </script>
+</body>
+</html>
