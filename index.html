@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id"> 
+<html lang="id"> <!--Bahasa indonesia-->
 <head>
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta charset="UTF-8"> <!--biar bisa ada emot, dan huruf khusus-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--biar bisa dihandphone-->
   <title>Portofolio Rista</title>
-  <style>
-    /* ====== STYLE DASAR ====== */
+  <style> /* CSS */
+    /* Style Dasar */
     body {
       margin: 0; /* hilangkan margin default browser */
       font-family: Arial, sans-serif; /* font utama */
@@ -13,7 +13,7 @@
       color: white; /* warna teks default */
     }
 
-    /* ====== HEADER NAVBAR ====== */
+    /* Header Navbar*/
     header {
       position: sticky; /* biar header selalu nempel di atas pas scroll */
       top: 0; 
@@ -32,11 +32,11 @@
     }
     header nav a:hover { color: white; } /* kalo mouse ke salah satu pilihan bakal warna putih */
 
-    /* ====== MAIN CONTENT ====== */
+    /* Main Content*/
     main { max-width: 1000px; margin: auto; padding: 20px; }
     h2 { margin-top: 50px; }
 
-    /* ====== ABOUT SECTION ====== */
+    /* About Section */
     .about {
       display: flex; /* teks & gambar sejajar */
       align-items: center;
@@ -55,7 +55,7 @@
       border-radius: 15px; /* sudut melengkung */
     }
 
-    /* ====== LINK SOSMED ====== */
+    /* Link Sosmed */
     .chips a {
       display: inline-block; /* biar bisa dikasih margin */
       background: #dc48d2;
@@ -67,7 +67,7 @@
       font-size: 14px;
     }
 
-    /* ====== FORM KONTAK ====== */
+    /* Form Kontak */
     form input, form textarea {
       width: 100%; padding: 10px; margin: 6px 0;
       border-radius: 8px; border: none;
@@ -82,7 +82,7 @@
     form .secondary { background: #9d6789; color: white; } /* tombol salin */
     footer { text-align: center; padding: 20px; color: #bbb; }
 
-    /* ====== PORTOFOLIO SECTION ====== */
+    /* Portofolio Section */
     .portfolio-grid {
       display: grid; /* pakai grid layout */
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* otomatis jadi kolom */
@@ -111,9 +111,10 @@
     }
     .portfolio-item a:hover { text-decoration: underline; }
   </style>
+
 </head>
 <body>
-  <!-- ====== HEADER NAVIGATION ====== -->
+  <!-- Header Navigation -->
   <header>
     <div><strong>⚡ Portofolio</strong></div>
     <nav>
@@ -124,13 +125,13 @@
   </header>
 
   <main>
-    <!-- ====== HERO SECTION (pengenalan) ====== -->
+    <!-- Hero section (pengenalan)= -->
     <section id="home">
       <h1>Halo 👋 Saya <span style="color:#22d3ee">Kadek Rista Dwi Purnami</span></h1>
       <p>Mahasiswa Ilmu Komputer — Universitas Pendidikan Ganesha</p>
     </section>
 
-    <!-- ====== ABOUT ME ====== -->
+    <!-- About (Tentang) -->
     <section id="about">
       <h2>🧑‍💻 Tentang Saya</h2>
       <div class="about">
@@ -143,7 +144,7 @@
       </div>
     </section>
 
-    <!-- ====== PORTOFOLIO ====== -->
+    <!-- PORTOFOLIO -->
     <section id="portfolio">
       <h2>📂 Portofolio</h2>
       <div class="portfolio-grid">
@@ -155,7 +156,7 @@
       </div>
     </section>
 
-    <!-- ====== KONTAK ====== -->
+    <!-- Kontak -->
     <section id="contact">
       <h2>✉️ Kontak</h2>
       <form id="contactForm">
@@ -182,12 +183,12 @@
     </section>
   </main>
 
-  <!-- ====== FOOTER ====== -->
+  <!-- footer -->
   <footer>
     <p>© 2025 Kadek Rista Dwi Purnami. Dibuat dengan HTML + CSS + JS sederhana.</p>
   </footer>
 
-  <!-- ====== SCRIPT JS ====== -->
+  <!--SCRIPT JS  -->
   <script>
     /* === FORM KONTAK: ketika submit form === */
     document.querySelector("#contactForm").addEventListener("submit", (e)=>{
